@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textV"
+        android:layout_width="330dp"
+        android:layout_height="35dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="Calculadora de fracciones"
+        android:textColor="#FF9800"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.053" />
+
+    <EditText
+        android:id="@+id/editN1"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="30dp"
+        android:autoSizeTextType="uniform"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="..."
+        android:inputType="number"
+        android:maxLength="4"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
+        app:layout_constraintEnd_toStartOf="@+id/editN2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textV" />
+
+    <EditText
+        android:id="@+id/editD1"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="440dp"
+        android:autoSizeTextType="uniform"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="..."
+        android:inputType="number"
+        android:maxLength="4"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editD2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <EditText
+        android:id="@+id/editN2"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="40dp"
+        android:autoSizeTextType="uniform"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="..."
+        android:inputType="number"
+        android:maxLength="4"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editN1"
+        app:layout_constraintTop_toBottomOf="@+id/textV" />
+
+    <EditText
+        android:id="@+id/editD2"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="440dp"
+        android:autoSizeTextType="uniform"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="..."
+        android:inputType="number"
+        android:maxLength="4"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editD1"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="140dp"
+        android:layout_height="1.5dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginEnd="40dp"
+        android:background="#FF9800"
+        app:layout_constraintBottom_toTopOf="@+id/editD2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.736"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editN2" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="140dp"
+        android:layout_height="1.5dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="240dp"
+        android:background="#FF9800"
+        app:layout_constraintBottom_toTopOf="@+id/editD1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editN1" />
+
+    <RadioGroup
+        android:layout_width="120dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="230dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rSum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Suma" />
+
+        <RadioButton
+            android:id="@+id/rRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resta" />
+
+        <RadioButton
+            android:id="@+id/rMul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Multiplica" />
+
+        <RadioButton
+            android:id="@+id/rDiv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Divide" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textNR"
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="400dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="Result"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/divider3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textDR"
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="230dp"
+        android:layout_marginBottom="200dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="Result"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="130dp"
+        android:layout_height="1.5dp"
+        android:layout_marginStart="230dp"
+        android:background="#FF9800"
+        app:layout_constraintBottom_toTopOf="@+id/textDR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNR" />
+
+    <Button
+        android:id="@+id/btnIgual"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="245dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="50dp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="#FF9800"
+        android:gravity="center"
+        android:text="="
+        android:textColor="#535353"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtMcd"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="560dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.807" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
